@@ -4,22 +4,85 @@
     <meta charset="UTF-8">
     <title>input checkbox</title>
     <link rel="stylesheet" type="text/css" href="main.css"/>
+    
+    
 
 </head>
 <body>
-    <div class="center"> 
-        <h1 class="center"> </h1>
-<h1>input checkbox</h1>
+
+<div class="center"> 
+
+<h1 class="center">input checkbox</h1>
 <p>O Input chebox permitem que o usuário selecione zero ou mais opções de um número limitado de opções.</p>
 
 <form>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="bicleta">
-    <label for="vehicle1"> Eu tenho uma bicleta.</label><br>
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="Carro">
-    <label for="vehicle2"> Eu tenho um carro.</label><br>
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="Barco">
-    <label for="vehicle3"> Eu tenho um barco.</label><br>
-</div>
+    <input type="checkbox" id="opcao1" name="opcao1" value="bicleta">
+    <label for="opcao1"> Eu tenho uma bicleta.</label><br>
+    <input type="checkbox" id="opcao2" name="opcao2" value="carro">
+    <label for="opcao2"> Eu tenho um carro.</label><br>
+    <input type="checkbox" id="opcao3" name="opcao3" value="barco">
+    <label for="opcao3"> Eu tenho um barco.</label><br>
+    
+    <input type="button" id="btEnviar" value="ENVIAR" onclick="jorginho()" />
+    <input type="button" id="btProcessar" value="PROCESSE" onclick="jorge()"/>
+
+    <script type="text/javascript">
+    var opcao1 = document.getElementById("opcao1");
+    var opcao2 = document.getElementById("opcao2");
+    var opcao3 = document.getElementById("opcao3");
+
+    function jorge() {
+        window.alert('OLÁ JORGE');
+
+        // if (Math.floor(Math.random() * 2)) {
+        //     opcao1.checked = true;
+
+        // } else {
+        //     opcao1.checked = false;
+        // }
+
+        // if (Math.floor(Math.random() * 2)) {
+        //     opcao2.checked = true;
+        // } else {
+        //     opcao2.checked = false;
+        // }
+        // if (Math.floor(Math.random() * 2)) {
+        //     opcao3.checked = true;
+        // } else {
+        //     opcao3.checked = false;
+        // }
+    }
+
+    function jorginho() {
+        if (opcao1.checked) {
+            console.log("escolheu 'bicicleta'");
+            window.alert("Voce tem uma bicicleta");
+            
+        } else {
+            console.log("não escolheu 'bicicleta'");
+        }
+
+        if (opcao2.checked) {
+            console.log("escolheu 'carro'");
+            window.alert("Voce tem uma carro");
+        } else {
+            console.log("não escolheu 'carro'");
+        }
+        if (opcao3.checked) {
+            console.log("escolheu 'barco'");
+            window.alert("Voce tem uma barco");
+        } else {
+            console.log("não escolheu 'barco'");
+        }         
+    };
+
+    </script>
 </form>
+
+
+</div>
+
+
 </body>
+
 </html>
